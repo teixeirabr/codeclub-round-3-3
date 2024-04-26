@@ -8,8 +8,13 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-export default {
+ var src_default = {
 	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
-	},
-};
+	  return new Response("Hello World!");
+	}
+  };
+  export {
+	src_default as default
+  };
+  
+
