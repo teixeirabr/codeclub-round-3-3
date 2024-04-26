@@ -10,17 +10,17 @@
 
  var src_default = {
 	async fetch(request, env, ctx) {
-	  if(request.url == "https://www.cloudflareworkers.com/test") {
-			 return new Response('Hello worker!', {
+	  if(request.method == "POST") {
+			 return new Response('You sent a POST', {
 				 headers: {
-					 'content-type': 'text/plain',
+					 'content-type': 'application/json',
 				 },
 			 });
 		 }
 		 else{
-			 return new Response('Error Worker! Wrong URL', {
+			 return new Response('Error!! Please use POST method', {
 				 headers: {
-					 'content-type': 'text/plain',
+					 'content-type': 'application/json',
 				 },
 			 });
 		 }
